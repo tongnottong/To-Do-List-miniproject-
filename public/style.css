@@ -120,26 +120,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px; /* Add spacing between elements */
 }
 
 .main-content li .task-title {
+  flex: 1; /* Take up available space */
   font-size: 18px;
   font-weight: bold;
   color: #333;
 }
 
-/* Small task buttons aligned to the left */
-.main-content li button {
-  padding: 6px 10px; /* Smaller button size */
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
-  margin-left: 5px; /* Space between buttons */
-}
-
-/* Complete button */
 .main-content li .complete-btn,
 .main-content li .delete-btn {
   padding: 8px 16px; /* Adjust padding to make the button size match the sidebar button */
@@ -147,9 +137,19 @@ body {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-left: 10px; /* Space between buttons */
+  margin-left: 5px; /* Space between buttons */
   width: auto; /* Ensure buttons adjust to the content */
 }
+
+/* Reorder the buttons */
+.main-content li .complete-btn {
+  order: 1; /* Ensure Complete button comes before Delete button */
+}
+
+.main-content li .delete-btn {
+  order: 2; /* Ensure Delete button comes after Complete button */
+}
+
 
 /* New task input styling */
 input[type="text"] {
