@@ -1,0 +1,192 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  background-color: #f4f4f9; /* Light gray background */
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #ff4b5c; /* Hard pink background */
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100%; /* Full height of the page */
+  position: fixed; /* Sidebar stays fixed on the left */
+  top: 0;
+  left: 0;
+  overflow-y: auto; /* Make sidebar scrollable if necessary */
+}
+
+.sidebar h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* Adjust the name input and button to be similar in size */
+.sidebar input {
+  width: 60%; /* Make the input slightly smaller than the button */
+  padding: 8px; /* Keep padding consistent */
+  margin: 5px 0; /* Maintain spacing between input and other elements */
+  border-radius: 6px;
+  font-size: 14px; /* Set a reasonable font size */
+}
+
+#name-input {
+  width: 95%; /* Make the input smaller */
+  padding: 6px; /* Slightly reduce padding */
+  margin: 5px 0; /* Keep spacing consistent */
+  border-radius: 6px;
+  font-size: 14px; /* Adjust font size to fit better */
+}
+
+/* Adjust the sidebar button to match the input size */
+.sidebar button {
+  width: 100%; /* Match the width of the input */
+  padding: 8px; /* Consistent padding */
+  margin: 5px 0; /* Consistent margin */
+  background-color: #ff4b5c; /* Hard pink background */
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.sidebar button:hover {
+  background-color: #e03d49; /* Darker pink on hover */
+}
+
+/* User list styling */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  background-color: #ff6f79; /* Lighter pink */
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar li:hover {
+  background-color: #ff4b5c; /* Darker pink when hovered */
+}
+
+.sidebar li:active {
+  background-color: #e03e4e; /* Even darker when clicked */
+}
+
+/* Main content styles */
+.main-content {
+  margin-left: 250px; /* Leave space for the sidebar */
+  padding: 20px;
+  width: calc(100% - 250px); /* Adjust width for the sidebar */
+  box-sizing: border-box;
+  background-color: white;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.main-content h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.main-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-content li {
+  padding: 10px;
+  background-color: #f1f1f1; /* Light gray background */
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-content li .task-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Small task buttons aligned to the left */
+.main-content li button {
+  padding: 6px 10px; /* Smaller button size */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-left: 5px; /* Space between buttons */
+}
+
+/* Complete button */
+.main-content li .complete-btn {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.main-content li .complete-btn:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+/* Delete button */
+.main-content li .delete-btn {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.main-content li .delete-btn:hover {
+  background-color: #d32f2f; /* Darker red */
+}
+
+/* New task input styling */
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* New task button */
+button {
+  padding: 10px;
+  background-color: #ff4b5c;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e03e4e; /* Darker pink */
+}
+
+button:disabled {
+  background-color: #ccc; /* Disabled state */
+  cursor: not-allowed;
+}
