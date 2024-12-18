@@ -140,33 +140,26 @@ body {
 }
 
 /* Complete button */
-.main-content li .complete-btn {
-  background-color: #4caf50; /* Green */
-  color: white;
-}
-
-.main-content li .complete-btn:hover {
-  background-color: #45a049; /* Darker green */
-}
-
-/* Delete button */
+.main-content li .complete-btn,
 .main-content li .delete-btn {
-  background-color: #f44336; /* Red */
-  color: white;
-}
-
-.main-content li .delete-btn:hover {
-  background-color: #d32f2f; /* Darker red */
+  padding: 8px 16px; /* Adjust padding to make the button size match the sidebar button */
+  font-size: 14px; /* Adjust font size to match the sidebar button */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px; /* Space between buttons */
+  width: auto; /* Ensure buttons adjust to the content */
 }
 
 /* New task input styling */
 input[type="text"] {
-  padding: 10px;
-  font-size: 16px;
+  padding: 10px; /* Same padding as the button */
+  font-size: 16px; /* Same font size as the button */
   border: 2px solid #ccc;
   border-radius: 6px;
-  width: 100%;
+  width: 100%; /* Full width, same as the button */
   margin-bottom: 20px;
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
 }
 
 /* New task button */
@@ -180,6 +173,7 @@ button {
   width: 100%;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-bottom: 15px; /* Increase the space between buttons */
 }
 
 button:hover {
